@@ -3,16 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>pers.zymir</groupId>
+        <artifactId>base-project</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <groupId>pers.zymir</groupId>
-    <artifactId>base-project</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>base-project-basic</module>
-        <module>base-project-util</module>
-        <module>base-project-all</module>
-    </modules>
+    <artifactId>base-project-all</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -22,9 +19,15 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
+            <groupId>pers.zymir</groupId>
+            <artifactId>base-project-basic</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>pers.zymir</groupId>
+            <artifactId>base-project-util</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
